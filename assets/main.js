@@ -39,6 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            
+            // Prevent background scrolling when menu is open
+            if (!mobileMenu.classList.contains('hidden')) {
+                document.body.classList.add('overflow-hidden', 'h-screen');
+                document.documentElement.classList.add('overflow-hidden', 'h-screen');
+            } else {
+                document.body.classList.remove('overflow-hidden', 'h-screen');
+                document.documentElement.classList.remove('overflow-hidden', 'h-screen');
+            }
         });
     }
 
@@ -103,3 +112,29 @@ window.showToast = function(message, type = 'success') {
         console.warn('Toastify not loaded: ', message);
     }
 }
+
+
+    // FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-toggle');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const icon = item.querySelector('i');
+            
+            // Close all others
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.nextElementSibling.classList.add('hidden');
+                    otherItem.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
