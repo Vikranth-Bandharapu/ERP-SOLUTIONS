@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Stackly ERP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+<body class="antialiased bg-slate-50 min-h-screen flex flex-col justify-center py-12 relative overflow-y-auto">
+    <!-- Decorative Background -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-100/50 to-transparent"></div>
+        <div class="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-100/50 to-transparent"></div>
+        
+        <!-- Animated Blobs -->
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 z-10 py-12">
+        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl border border-white p-8">
+            <div class="text-center mb-8">
+                <a href="index.html" class="inline-flex items-center justify-center gap-2 mb-6">
+                    <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+                </a>
+                <h1 class="text-3xl font-bold font-heading text-dark mb-2">Welcome back</h1>
+                <p class="text-slate-500 text-sm">Please enter your details to sign in.</p>
+            </div>
+            
+            <form id="loginForm" class="space-y-5" novalidate>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                    <input type="email" id="loginEmail" required class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white/50 transition">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="loginPassword" required class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white/50 pr-10 transition">
+                        <i class="fa-regular fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer hover:text-slate-600" onclick="togglePassword('loginPassword')"></i>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Select Role</label>
+                    <select id="loginRole" required class="w-full border border-slate-300 rounded-lg px-4 py-2.5 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white/50 text-slate-700 transition">
+                        <option value="" disabled selected>Select Role to Login As</option>
+                        <option value="Super Admin">Super Admin</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                </div>
+                
+                <div class="flex items-center justify-between mt-2 mb-6">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                        <label for="remember" class="ml-2 text-sm text-slate-600">Remember me</label>
+                    </div>
+                    <a href="404.html" class="text-sm font-medium text-blue-600 hover:underline no-route">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn-primary w-full py-3 rounded-lg font-medium text-lg shadow-lg">Sign In</button>
+                
+                <p class="text-center text-sm text-slate-500 mt-6">
+                    Don't have an account? <a href="signup.html" class="text-blue-600 font-bold hover:underline">Sign up</a>
+                </p>
+                
+                <div class="text-center mt-6">
+                    <a href="index.html" class="text-sm text-slate-400 hover:text-dark transition"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script>
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            const icon = input.nextElementSibling;
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+    </script>
+</body>
+</html>

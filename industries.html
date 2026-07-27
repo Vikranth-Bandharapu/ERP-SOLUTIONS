@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries We Serve | Stackly ERP Solutions</title>
+    <meta name="description" content="Stackly ERP tailored for Manufacturing, Healthcare, Retail, Logistics, Government, and Real Estate industries.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-slate-700 bg-slate-50">
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+            </a>
+            
+            <nav class="hidden lg:flex gap-8 items-center">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 font-medium transition">About</a>
+                <a href="erp-modules.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Modules</a>
+                <a href="industries.html" class="text-blue-600 font-bold hover:text-blue-700 transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+                <a href="contact.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Contact</a>
+            </nav>
+            
+            <div class="hidden lg:flex gap-4">
+                <a href="login.html" class="text-slate-700 font-medium py-2 px-4 hover:text-blue-600 transition">Login</a>
+                <a href="signup.html" class="btn-primary py-2 px-6 rounded-full font-medium shadow-lg hover-lift">Get Started</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-800 text-2xl focus:outline-none flex-shrink-0 ml-auto">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-dark/95 backdrop-blur-md pt-24 px-8">
+        <div class="flex flex-col gap-6 text-center text-xl">
+            <a href="index.html" class="text-white font-medium hover:text-blue-400">Home</a>
+            <a href="about.html" class="text-white font-medium hover:text-blue-400">About</a>
+            <a href="erp-modules.html" class="text-white font-medium hover:text-blue-400">Modules</a>
+            <a href="industries.html" class="text-white font-medium hover:text-blue-400">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+            <a href="contact.html" class="text-white font-medium hover:text-blue-400">Contact</a>
+            <a href="login.html" class="text-white font-medium hover:text-blue-400 mt-4 border border-slate-700 py-3 rounded-lg">Login</a>
+            <a href="signup.html" class="btn-primary py-3 rounded-lg font-medium">Get Started</a>
+        </div>
+    </div>
+
+    <!-- 1. Banner -->
+    <section class="pt-32 pb-20 bg-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyIiBmaWxsPSJ3aGl0ZSI+PC9jaXJjbGU+Cjwvc3ZnPg==')]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">Built for Every Industry</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">Stackly adapts to the unique workflows and regulatory requirements of your specific sector.</p>
+        </div>
+    </section>
+
+    <!-- 2. Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-home"></i> Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-blue-600">Industries We Serve</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Industries Grid -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Industry 1: Manufacturing -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="assets/images/industry_manufacturing.webp" alt="Manufacturing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-blue-900/40"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fa-solid fa-industry text-4xl text-white drop-shadow-md"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Manufacturing</h3>
+                        <p class="text-slate-600 text-sm mb-6">Optimize production planning, bill of materials (BOM), shop floor control, and quality assurance.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Industry 2: Healthcare -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 relative overflow-hidden">
+                          <img src="assets/images/industry_healthcare.webp" alt="Healthcare" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                          <div class="absolute inset-0 bg-blue-900/40"></div>
+                          <div class="absolute inset-0 flex items-center justify-center">
+                              <i class="fa-solid fa-heart-pulse text-4xl text-white drop-shadow-md"></i>
+                          </div>
+                      </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Healthcare</h3>
+                        <p class="text-slate-600 text-sm mb-6">HIPAA-compliant patient data management, hospital inventory, billing, and staff scheduling.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Industry 3: Retail -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 relative overflow-hidden">
+                          <img src="assets/images/industry_retail.webp" alt="Retail & E-commerce" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                          <div class="absolute inset-0 bg-blue-900/40"></div>
+                          <div class="absolute inset-0 flex items-center justify-center">
+                              <i class="fa-solid fa-store text-4xl text-white drop-shadow-md"></i>
+                          </div>
+                      </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Retail & E-commerce</h3>
+                        <p class="text-slate-600 text-sm mb-6">Omnichannel inventory, point of sale (POS) integration, CRM, and supply chain management.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Industry 4: Logistics -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 relative overflow-hidden">
+                          <img src="assets/images/industry_logistics.webp" alt="Logistics & Transport" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                          <div class="absolute inset-0 bg-blue-900/40"></div>
+                          <div class="absolute inset-0 flex items-center justify-center">
+                              <i class="fa-solid fa-truck-fast text-4xl text-white drop-shadow-md"></i>
+                          </div>
+                      </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Logistics & Transport</h3>
+                        <p class="text-slate-600 text-sm mb-6">Fleet management, route optimization, warehouse management system (WMS), and tracking.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Industry 5: Education -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 relative overflow-hidden">
+                          <img src="assets/images/industry_education.webp" alt="Education" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                          <div class="absolute inset-0 bg-blue-900/40"></div>
+                          <div class="absolute inset-0 flex items-center justify-center">
+                              <i class="fa-solid fa-graduation-cap text-4xl text-white drop-shadow-md"></i>
+                          </div>
+                      </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Education</h3>
+                        <p class="text-slate-600 text-sm mb-6">Student information systems (SIS), faculty payroll, campus facility management, and online portals.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Industry 6: Real Estate -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover-lift group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 relative overflow-hidden">
+                          <img src="assets/images/industry_realestate.webp" alt="Real Estate" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                          <div class="absolute inset-0 bg-blue-900/40"></div>
+                          <div class="absolute inset-0 flex items-center justify-center">
+                              <i class="fa-solid fa-building-user text-4xl text-white drop-shadow-md"></i>
+                          </div>
+                      </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold font-heading text-dark mb-3">Real Estate</h3>
+                        <p class="text-slate-600 text-sm mb-6">Property management, tenant portals, lease tracking, maintenance scheduling, and accounting.</p>
+                        <a href="404.html" class="text-blue-600 font-medium text-sm hover:text-blue-800 flex items-center gap-2">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Highlight Section -->
+    <section class="py-24 bg-dark text-white overflow-hidden relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Built for scale, <span class="text-blue-400">designed for flexibility.</span></h2>
+                    <p class="text-slate-400 text-lg mb-6">Stackly's modular architecture means you can start with the features essential to your industry today and seamlessly activate new capabilities as your organization grows.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400"></i> ISO Compliant</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400"></i> Multi-currency & Multi-language</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400"></i> RESTful API for custom integrations</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2" data-aos="zoom-in">
+                    <!-- Abstract Globe/Network visual -->
+                    <div class="relative w-full aspect-square max-w-md mx-auto">
+                        <div class="absolute inset-0 border border-slate-700 rounded-full animate-spin" style="animation-duration: 20s;"></div>
+                        <div class="absolute inset-4 border border-slate-700/50 rounded-full animate-spin" style="animation-duration: 15s; animation-direction: reverse;"></div>
+                        <div class="absolute inset-8 border border-blue-500/30 rounded-full animate-pulse"></div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-[0_0_30px_rgba(37,99,235,0.5)]">
+                            <i class="fa-solid fa-globe text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA Section -->
+    <section class="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Don't see your industry?</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Stackly is highly customizable. Talk to our solutions team to discuss how we can adapt Stackly for your specific business model.</p>
+            <div class="flex justify-center gap-4">
+                <a href="404.html" class="bg-white text-blue-600 py-3 px-8 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">Contact Solutions Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-300 pt-20 pb-10 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 text-center md:text-left">
+                <!-- Brand -->
+                <div class="lg:col-span-2 flex flex-col items-center md:items-start">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
+                        The modern, unified enterprise resource planning software designed for agility, scale, and performance.
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Finance</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">HR & Payroll</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">CRM</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="erp-modules.html" class="hover:text-white transition">Modules</a></li>
+                        <li><a href="industries.html" class="hover:text-white transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Stackly ERP Solutions. All rights reserved.</p>
+                <div class="flex gap-6 justify-center">
+                    <span>System Status: <span class="text-green-500 ml-1">● All Systems Operational</span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top-btn" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-blue-700 hover:-translate-y-1 focus:outline-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

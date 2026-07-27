@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Stackly ERP Solutions</title>
+    <meta name="description" content="Learn about Stackly, our mission, vision, and the leadership team driving the future of enterprise resource planning.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-slate-700 bg-slate-50">
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+            </a>
+            
+            <nav class="hidden lg:flex gap-8 items-center">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Home</a>
+                <a href="about.html" class="text-blue-600 font-bold hover:text-blue-700 transition">About</a>
+                <a href="erp-modules.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Modules</a>
+                <a href="industries.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+                <a href="contact.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Contact</a>
+            </nav>
+            
+            <div class="hidden lg:flex gap-4">
+                <a href="login.html" class="text-slate-700 font-medium py-2 px-4 hover:text-blue-600 transition">Login</a>
+                <a href="signup.html" class="btn-primary py-2 px-6 rounded-full font-medium shadow-lg hover-lift">Get Started</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-800 text-2xl focus:outline-none flex-shrink-0 ml-auto">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-dark/95 backdrop-blur-md pt-24 px-8">
+        <div class="flex flex-col gap-6 text-center text-xl">
+            <a href="index.html" class="text-white font-medium hover:text-blue-400">Home</a>
+            <a href="about.html" class="text-white font-medium hover:text-blue-400">About</a>
+            <a href="erp-modules.html" class="text-white font-medium hover:text-blue-400">Modules</a>
+            <a href="industries.html" class="text-white font-medium hover:text-blue-400">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+            <a href="contact.html" class="text-white font-medium hover:text-blue-400">Contact</a>
+            <a href="login.html" class="text-white font-medium hover:text-blue-400 mt-4 border border-slate-700 py-3 rounded-lg">Login</a>
+            <a href="signup.html" class="btn-primary py-3 rounded-lg font-medium">Get Started</a>
+        </div>
+    </div>
+
+    <!-- 1. Banner -->
+    <section class="pt-32 pb-20 bg-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-blue-900/20"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">Pioneering the Future of ERP</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">We build intelligent systems that empower enterprises to grow faster and operate smarter.</p>
+        </div>
+    </section>
+
+    <!-- 2. Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-home"></i> Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-blue-600">About Us</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Company Overview -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="relative">
+                        <!-- Team Image -->
+                        <div class="aspect-[4/3] rounded-2xl bg-slate-200 border border-white shadow-xl overflow-hidden relative">
+                            <img src="assets/images/about_team.webp" alt="Stackly Team" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                                <span class="text-white font-medium text-lg"><i class="fa-solid fa-users mr-2"></i> Our Team</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Stat -->
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 text-center w-40">
+                            <p class="text-3xl font-bold text-blue-600 mb-1">10+</p>
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <span class="text-blue-600 font-bold tracking-wider text-sm uppercase mb-4 block">Our Story</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-dark">Building the operational backbone of modern enterprises.</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Founded in 2016, Stackly was born out of frustration with legacy ERP systems that were clunky, hard to use, and expensive to maintain. We set out to create a unified platform that combines enterprise-grade power with consumer-grade design.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Today, Stackly powers operations for thousands of organizations worldwide, helping them break down data silos, automate workflows, and make intelligent decisions in real-time.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-4xl font-bold text-dark mb-2">5,000+</p>
+                            <p class="text-sm text-slate-500 font-medium">Enterprise Clients</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-dark mb-2">120+</p>
+                            <p class="text-sm text-slate-500 font-medium">Countries Served</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Mission & Vision -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-10 hover-lift transition-all duration-300" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-lg shadow-blue-600/30">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-4 text-dark">Our Mission</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        To simplify enterprise complexity by providing an intuitive, scalable, and interconnected platform that enables businesses to focus on growth rather than operations.
+                    </p>
+                </div>
+                
+                <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-10 hover-lift transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-8 shadow-lg shadow-indigo-600/30">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold font-heading mb-4 text-dark">Our Vision</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        To become the global standard for business management software, creating a world where data flows seamlessly and organizations operate with perfect harmony.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Timeline -->
+    <section class="py-24 bg-dark text-white relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Our Journey</h2>
+                <p class="text-slate-400">Milestones that shaped Stackly.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-slate-700/50"></div>
+                
+                <div class="space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative flex items-center justify-between group" data-aos="fade-up">
+                        <div class="w-5/12 text-right pr-8">
+                            <h4 class="text-xl font-bold text-blue-400 mb-2">2016</h4>
+                            <p class="text-slate-300 text-sm">Founded in San Francisco with a seed round of $2M to build the core HR module.</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-dark border-4 border-blue-500 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(37,99,235,0.5)] group-hover:scale-125 transition">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div class="w-5/12 pl-8"></div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="relative flex items-center justify-between group" data-aos="fade-up">
+                        <div class="w-5/12 pr-8"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-dark border-4 border-indigo-500 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(99,102,241,0.5)] group-hover:scale-125 transition">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div class="w-5/12 text-left pl-8">
+                            <h4 class="text-xl font-bold text-indigo-400 mb-2">2019</h4>
+                            <p class="text-slate-300 text-sm">Launched Finance and Inventory modules, securing Series A funding of $15M.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="relative flex items-center justify-between group" data-aos="fade-up">
+                        <div class="w-5/12 text-right pr-8">
+                            <h4 class="text-xl font-bold text-purple-400 mb-2">2022</h4>
+                            <p class="text-slate-300 text-sm">Crossed 1,000 enterprise customers and expanded operations to Europe & Asia.</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-dark border-4 border-purple-500 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:scale-125 transition">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div class="w-5/12 pl-8"></div>
+                    </div>
+                    
+                    <!-- Item 4 -->
+                    <div class="relative flex items-center justify-between group" data-aos="fade-up">
+                        <div class="w-5/12 pr-8"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-dark border-4 border-blue-400 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(96,165,250,0.5)] group-hover:scale-125 transition">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                        <div class="w-5/12 text-left pl-8">
+                            <h4 class="text-xl font-bold text-blue-400 mb-2">2026</h4>
+                            <p class="text-slate-300 text-sm">Introduced AI Predictive Analytics. Named Leader in Magic Quadrant for Cloud ERP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Leadership -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4 text-dark">Meet Our Leadership</h2>
+                <p class="text-slate-600">The minds behind Stackly's innovation.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Leader 1 -->
+                <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-48 h-48 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden relative border-4 border-white shadow-lg">
+                         <img src="assets/images/team/elena_rodriguez.webp" alt="Elena Rodriguez" class="w-full h-full object-cover">
+                      </div>
+                      <h4 class="font-bold text-lg text-dark group-hover:text-blue-600 transition">Elena Rodriguez</h4>
+                    <p class="text-sm text-slate-500 font-medium">Chief Executive Officer</p>
+                </div>
+                
+                <!-- Leader 2 -->
+                <div class="group text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-48 h-48 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="assets/images/team/david_chen.webp" alt="David Chen" class="w-full h-full object-cover">
+                      </div>
+                      <h4 class="font-bold text-lg text-dark group-hover:text-blue-600 transition">David Chen</h4>
+                    <p class="text-sm text-slate-500 font-medium">Chief Technology Officer</p>
+                </div>
+                
+                <!-- Leader 3 -->
+                <div class="group text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-48 h-48 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="assets/images/team/marcus_johnson.webp" alt="Marcus Johnson" class="w-full h-full object-cover">
+                      </div>
+                      <h4 class="font-bold text-lg text-dark group-hover:text-blue-600 transition">Marcus Johnson</h4>
+                    <p class="text-sm text-slate-500 font-medium">Chief Operations Officer</p>
+                </div>
+                
+                <!-- Leader 4 -->
+                <div class="group text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-48 h-48 mx-auto rounded-full bg-slate-200 mb-6 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="assets/images/team/sophia_patel.webp" alt="Sophia Patel" class="w-full h-full object-cover">
+                      </div>
+                      <h4 class="font-bold text-lg text-dark group-hover:text-blue-600 transition">Sophia Patel</h4>
+                    <p class="text-sm text-slate-500 font-medium">Chief Marketing Officer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Certifications & Achievements -->
+    <section class="py-24 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4 text-dark">Certifications & Awards</h2>
+                <p class="text-slate-600">Recognized globally for security, performance, and usability.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <!-- Cert 1 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-100 w-48" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-shield-halved text-5xl text-blue-500 mb-4"></i>
+                    <h5 class="font-bold text-center text-dark text-sm">ISO 27001 Certified</h5>
+                    <p class="text-xs text-slate-500 mt-2">Information Security</p>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-100 w-48" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-lock text-5xl text-indigo-500 mb-4"></i>
+                    <h5 class="font-bold text-center text-dark text-sm">SOC 2 Type II</h5>
+                    <p class="text-xs text-slate-500 mt-2">Security & Privacy</p>
+                </div>
+                
+                <!-- Cert 3 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-100 w-48" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fa-solid fa-award text-5xl text-yellow-500 mb-4"></i>
+                    <h5 class="font-bold text-center text-dark text-sm">Best Cloud ERP 2025</h5>
+                    <p class="text-xs text-slate-500 mt-2">Tech Innovators Award</p>
+                </div>
+                
+                <!-- Cert 4 -->
+                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-100 w-48" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fa-solid fa-ranking-star text-5xl text-purple-500 mb-4"></i>
+                    <h5 class="font-bold text-center text-dark text-sm">G2 Leader Fall 2025</h5>
+                    <p class="text-xs text-slate-500 mt-2">High Performer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA Section -->
+    <section class="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Ready to see Stackly in action?</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Get a personalized demo from our experts and see how Stackly can streamline your specific business processes.</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-white text-blue-600 py-3 px-8 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 no-route" onclick="window.location.href='404.html'">Request a Demo</button>
+                <a href="404.html" class="border border-blue-300 text-white py-3 px-8 rounded-full font-medium hover:bg-blue-500/30 transition duration-300">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-300 pt-20 pb-10 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 text-center md:text-left">
+                <!-- Brand -->
+                <div class="lg:col-span-2 flex flex-col items-center md:items-start">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
+                        The modern, unified enterprise resource planning software designed for agility, scale, and performance.
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Finance</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">HR & Payroll</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">CRM</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="erp-modules.html" class="hover:text-white transition">Modules</a></li>
+                        <li><a href="industries.html" class="hover:text-white transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Stackly ERP Solutions. All rights reserved.</p>
+                <div class="flex gap-6 justify-center">
+                    <span>System Status: <span class="text-green-500 ml-1">● All Systems Operational</span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top-btn" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-blue-700 hover:-translate-y-1 focus:outline-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

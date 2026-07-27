@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Modules | Stackly ERP Solutions</title>
+    <meta name="description" content="Explore Stackly's comprehensive suite of ERP modules including Finance, HR, CRM, Inventory, Manufacturing, and more.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-slate-700 bg-slate-50">
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+            </a>
+            
+            <nav class="hidden lg:flex gap-8 items-center">
+                <a href="index.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Home</a>
+                <a href="about.html" class="text-slate-600 hover:text-blue-600 font-medium transition">About</a>
+                <a href="erp-modules.html" class="text-blue-600 font-bold hover:text-blue-700 transition">Modules</a>
+                <a href="industries.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+                <a href="contact.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Contact</a>
+            </nav>
+            
+            <div class="hidden lg:flex gap-4">
+                <a href="login.html" class="text-slate-700 font-medium py-2 px-4 hover:text-blue-600 transition">Login</a>
+                <a href="signup.html" class="btn-primary py-2 px-6 rounded-full font-medium shadow-lg hover-lift">Get Started</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-800 text-2xl focus:outline-none flex-shrink-0 ml-auto">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-dark/95 backdrop-blur-md pt-24 px-8">
+        <div class="flex flex-col gap-6 text-center text-xl">
+            <a href="index.html" class="text-white font-medium hover:text-blue-400">Home</a>
+            <a href="about.html" class="text-white font-medium hover:text-blue-400">About</a>
+            <a href="erp-modules.html" class="text-white font-medium hover:text-blue-400">Modules</a>
+            <a href="industries.html" class="text-white font-medium hover:text-blue-400">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a>
+            <a href="contact.html" class="text-white font-medium hover:text-blue-400">Contact</a>
+            <a href="login.html" class="text-white font-medium hover:text-blue-400 mt-4 border border-slate-700 py-3 rounded-lg">Login</a>
+            <a href="signup.html" class="btn-primary py-3 rounded-lg font-medium">Get Started</a>
+        </div>
+    </div>
+
+    <!-- 1. Banner -->
+    <section class="pt-32 pb-20 bg-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-blue-900/20"></div>
+            <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-600/30 via-transparent to-transparent"></div>
+        </div>
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">Unified ERP Modules</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto">Discover the building blocks of Stackly. Choose the modules you need today, and add more as you grow.</p>
+        </div>
+    </section>
+
+    <!-- 2. Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-home"></i> Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-blue-600">ERP Modules</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Navigation Pills -->
+    <section class="py-12 bg-slate-50 border-b border-slate-200 sticky top-16 z-30 shadow-sm hidden md:block">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <a href="#finance" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">Finance</a>
+                <a href="#hr" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">HR & Payroll</a>
+                <a href="#crm" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">CRM & Sales</a>
+                <a href="#inventory" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">Inventory</a>
+                <a href="#manufacturing" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">Manufacturing</a>
+                <a href="#projects" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium hover:bg-blue-50 hover:text-blue-600 transition shadow-sm">Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Module: Finance -->
+    <section id="finance" class="py-24 bg-white scroll-mt-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-6">
+                        <i class="fa-solid fa-chart-pie"></i> Finance Management
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-dark">Real-time Financial Visibility</h2>
+                    <p class="text-slate-600 text-lg mb-8">Automate your core accounting processes, manage cash flow, and ensure global tax compliance with our intelligent finance module.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                            <i class="fa-solid fa-file-invoice text-blue-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Automated Invoicing & Billing</h4>
+                                <p class="text-sm text-slate-500">Generate recurring invoices and accept global payments automatically.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                            <i class="fa-solid fa-scale-balanced text-blue-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">General Ledger & Reconciliation</h4>
+                                <p class="text-sm text-slate-500">Multi-currency, multi-entity consolidation with AI-powered reconciliation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="signup.html" class="btn-primary py-3 px-8 rounded-full font-medium inline-block shadow-lg">Try Finance Module</a>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-slate-100 p-2 rounded-2xl border border-slate-200 shadow-xl relative overflow-hidden">
+                        <!-- Module Image -->
+                        <img src="assets/images/module_finance.webp" alt="Finance Module" class="w-full h-auto rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Module: HR -->
+    <section id="hr" class="py-24 bg-slate-50 scroll-mt-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-6">
+                        <i class="fa-solid fa-users"></i> Human Resources
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-dark">Empower Your Workforce</h2>
+                    <p class="text-slate-600 text-lg mb-8">Manage the entire employee lifecycle from recruitment to retirement, including payroll, attendance, and performance tracking.</p>
+                    
+                    <ul class="space-y-4 mb-8 text-slate-700 font-medium">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-indigo-500"></i> Global Payroll Processing</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-indigo-500"></i> Time & Attendance Tracking</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-indigo-500"></i> Performance Management (OKRs)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-indigo-500"></i> Employee Self-Service Portal</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-indigo-500"></i> Recruitment Pipeline</li>
+                    </ul>
+                    
+                    <a href="404.html" class="btn-primary py-3 px-8 rounded-full font-medium inline-block shadow-lg">Try HR Module</a>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-indigo-100 p-2 rounded-2xl border border-indigo-200 shadow-xl relative overflow-hidden">
+                        <!-- Abstract Dashboard Mockup -->
+                        <div class="bg-white rounded-xl h-80 w-full p-4 flex flex-col relative overflow-hidden">
+                            <div class="h-6 w-1/3 bg-slate-200 rounded mb-6"></div>
+                            <!-- Mock Table -->
+                            <div class="space-y-3">
+                                <div class="h-8 bg-slate-100 rounded w-full"></div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-slate-300"></div>
+                                    <div class="h-4 bg-slate-200 rounded flex-1"></div>
+                                    <div class="h-4 bg-green-200 rounded w-16"></div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-slate-300"></div>
+                                    <div class="h-4 bg-slate-200 rounded flex-1"></div>
+                                    <div class="h-4 bg-green-200 rounded w-16"></div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-slate-300"></div>
+                                    <div class="h-4 bg-slate-200 rounded flex-1"></div>
+                                    <div class="h-4 bg-yellow-200 rounded w-16"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 6. Module: CRM -->
+    <section id="crm" class="py-24 bg-white scroll-mt-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-bold mb-6">
+                        <i class="fa-solid fa-handshake"></i> CRM & Sales
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6 text-dark">Close Deals Faster</h2>
+                    <p class="text-slate-600 text-lg mb-8">Nurture relationships, track sales pipelines, and forecast revenue with complete visibility into every customer interaction.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-pink-50/50 border border-pink-100">
+                            <i class="fa-solid fa-bullseye text-pink-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Pipeline Management</h4>
+                                <p class="text-sm text-slate-500">Drag-and-drop Kanban boards for visual deal tracking.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                            <i class="fa-solid fa-envelope-open-text text-pink-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">Email Integration</h4>
+                                <p class="text-sm text-slate-500">Sync with Gmail/Outlook to track open rates and responses automatically.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="signup.html" class="btn-primary py-3 px-8 rounded-full font-medium inline-block shadow-lg">Try CRM Module</a>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-pink-100 p-2 rounded-2xl border border-pink-200 shadow-xl relative overflow-hidden">
+                        <!-- Abstract Dashboard Mockup Kanban -->
+                        <div class="bg-white rounded-xl h-auto md:h-80 w-full p-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <!-- Column 1 -->
+                            <div class="bg-slate-50 rounded-lg p-2 space-y-2">
+                                <div class="h-4 w-1/2 bg-slate-200 rounded mb-4"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="bg-slate-50 rounded-lg p-2 space-y-2">
+                                <div class="h-4 w-1/2 bg-blue-200 rounded mb-4"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                            </div>
+                            <!-- Column 3 -->
+                            <div class="bg-slate-50 rounded-lg p-2 space-y-2">
+                                <div class="h-4 w-1/2 bg-green-200 rounded mb-4"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                                <div class="h-16 bg-white border border-slate-200 rounded p-2 shadow-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Statistics / Summary -->
+    <section class="py-20 bg-dark text-white relative">
+        <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+             <h2 class="text-3xl font-bold font-heading mb-10">And many more modules integrated perfectly.</h2>
+             <div class="flex justify-center gap-4 flex-wrap">
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Inventory</span>
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Manufacturing</span>
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Procurement</span>
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Project Management</span>
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Warehouse</span>
+                 <span class="px-4 py-2 border border-slate-700 rounded-full text-slate-300">Helpdesk Support</span>
+             </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA Section -->
+    <section class="py-20 relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold font-heading mb-6">Build Your Perfect ERP System</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Start with the modules you need today. Stackly scales endlessly as your requirements evolve.</p>
+            <div class="flex justify-center gap-4">
+                <a href="404.html" class="bg-white text-blue-600 py-3 px-8 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300">Start Free Trial</a>
+                <a href="contact.html" class="border border-blue-300 text-white py-3 px-8 rounded-full font-medium hover:bg-blue-500/30 transition duration-300">Talk to Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-300 pt-20 pb-10 border-t border-slate-800">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 text-center md:text-left">
+                <!-- Brand -->
+                <div class="lg:col-span-2 flex flex-col items-center md:items-start">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <img src="assets/images/logo.webp" alt="Stackly Logo" class="h-12 md:h-24 w-auto max-w-[60vw] object-contain">
+                    </a>
+                    <p class="text-sm text-slate-400 mb-6 max-w-sm leading-relaxed mx-auto md:mx-0">
+                        The modern, unified enterprise resource planning software designed for agility, scale, and performance.
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-400 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Finance</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">HR & Payroll</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">CRM</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="erp-modules.html" class="hover:text-white transition">Modules</a></li>
+                        <li><a href="industries.html" class="hover:text-white transition">Industries</a>
+                <a href="blog.html" class="text-slate-600 hover:text-blue-600 font-medium transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="404.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="404.html" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Stackly ERP Solutions. All rights reserved.</p>
+                <div class="flex gap-6 justify-center">
+                    <span>System Status: <span class="text-green-500 ml-1">● All Systems Operational</span></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top-btn" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-40 hover:bg-blue-700 hover:-translate-y-1 focus:outline-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
